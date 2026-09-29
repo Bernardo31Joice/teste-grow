@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AVA Grow EdTech</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+</head>
+
+<body>
+  <main class="phone">
+
+    <!-- TELA 1 - ESCOLHA DE PERFIL -->
+    <section class="screen active green-screen" id="screen-profile">
+      <div class="status-bar">
+        <span>9:41</span>
+        <span><i class="fa-solid fa-signal"></i> <i class="fa-solid fa-wifi"></i> <i class="fa-solid fa-battery-full"></i></span>
+      </div>
+
+      <div class="brand">
+        <div class="logo-circle">GROW</div>
+        <h2>EdTech</h2>
+        <p>Plataforma Educacional</p>
+      </div>
+
+      <div class="login-card">
+        <h1>Bem-vindo de volta!</h1>
+        <p>Antes de começar, precisamos saber em qual das opções abaixo você se encaixa</p>
+
+        <div class="profile-list">
+          <button class="profile-btn" data-profile="professor">
+            <i class="fa-regular fa-user"></i>
+            <span>PROFESSOR</span>
+          </button>
+
+          <button class="profile-btn" data-profile="aluno">
+            <i class="fa-regular fa-user"></i>
+            <span>ALUNO</span>
+          </button>
+
+          <button class="profile-btn" data-profile="voluntario">
+            <i class="fa-regular fa-user"></i>
+            <span>VOLUNTÁRIO</span>
+          </button>
+        </div>
+
+        <button class="yellow-btn" id="go-login">Entrar</button>
+        <a href="#" class="forgot">Esqueceu sua senha?</a>
+      </div>
+
+      <footer>© 2026 GROW - Transformando vidas através da educação</footer>
+    </section>
+
+    <!-- TELA 2 - LOGIN -->
+    <section class="screen green-screen" id="screen-login">
+      <div class="status-bar">
+        <span>9:41</span>
+        <span><i class="fa-solid fa-signal"></i> <i class="fa-solid fa-wifi"></i> <i class="fa-solid fa-battery-full"></i></span>
+      </div>
+
+      <div class="brand">
+        <div class="logo-circle">GROW</div>
+        <h2>EdTech</h2>
+        <p>Plataforma Educacional</p>
+      </div>
+
+      <div class="login-card login-form-card">
+        <h1>Bem-vindo de volta!</h1>
+
+        <label>ID do Usuário</label>
+        <div class="input-box">
+          <i class="fa-regular fa-user"></i>
+          <input type="text" placeholder="Digite seu ID" />
+        </div>
+
+        <label>Senha</label>
+        <div class="input-box">
+          <i class="fa-solid fa-lock"></i>
+          <input type="password" placeholder="Digite sua senha" />
+        </div>
+
+        <button class="yellow-btn" id="login-btn">Entrar</button>
+        <a href="#" class="forgot">Esqueceu sua senha?</a>
+      </div>
+
+      <footer>© 2026 GROW - Transformando vidas através da educação</footer>
+    </section>
+
+    <!-- PROFESSOR - HOME -->
+    <section class="screen" id="screen-professor">
+      <header class="top-bar">
+        <button class="icon-btn menu-open" data-role="professor">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" placeholder="Buscar..." />
+        </div>
+      </header>
+
+      <div class="content">
+        <div class="teacher-hero">
+          <h1>Portal do Professor </h1>
+          <p>terça-feira, 17 de março</p>
+
+          <div class="hero-grid">
+            <div>
+              <i class="fa-regular fa-calendar"></i>
+              <h2>2</h2>
+              <p>turmas ativas</p>
+            </div>
+
+            <div>
+              <i class="fa-solid fa-users"></i>
+              <h2>33</h2>
+              <p>alunos total</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat green">
+            <i class="fa-regular fa-circle-check"></i>
+            <h3>Frequência</h3>
+            <strong>89%</strong>
+            <p>média das turmas</p>
+          </div>
+
+          <div class="stat yellow">
+            <i class="fa-regular fa-clipboard"></i>
+            <h3>Atividades</h3>
+            <strong>12</strong>
+            <p>este mês</p>
+          </div>
+
+          <div class="stat blue">
+            <i class="fa-solid fa-arrow-trend-up"></i>
+            <h3>Performance</h3>
+            <strong>87%</strong>
+            <p>média geral</p>
+          </div>
+
+          <div class="stat dark">
+            <i class="fa-regular fa-award"></i>
+            <h3>Certificados</h3>
+            <strong>24</strong>
+            <p>emitidos</p>
+          </div>
+        </div>
+
+        <h2 class="section-title">Ações Rápidas</h2>
+
+        <div class="quick-card blue" onclick="showScreen('screen-presenca-prof')">
+          <i class="fa-regular fa-circle-check"></i>
+          <h3>Registrar Presença</h3>
+          <p>Marcar presença da última aula</p>
+        </div>
+
+        <div class="quick-card yellow">
+          <i class="fa-regular fa-clipboard"></i>
+          <h3>Publicar Atividade</h3>
+          <p>Criar nova atividade</p>
+        </div>
+
+        <div class="quick-card mint">
+          <i class="fa-solid fa-upload"></i>
+          <h3>Importar Dados</h3>
+          <p>Upload de planilhas</p>
+        </div>
+
+        <h2 class="section-title row-title">
+          Minhas Turmas
+          <button onclick="showScreen('screen-turmas-prof')">Ver Todas →</button>
+        </h2>
+
+        <div class="course-card">
+          <div class="course-image academic">Academic<br>English</div>
+          <div class="course-body">
+            <h3>Academic English</h3>
+            <p>Turma de inglês acadêmico para escrita de artigos científicos.</p>
+            <span><i class="fa-solid fa-users"></i> 25 alunos</span>
+            <span><i class="fa-regular fa-calendar"></i> Sábados, 10h-11h30</span>
+
+            <div class="course-actions">
+              <button onclick="showScreen('screen-class-prof')">Acessar Turma →</button>
+              <button onclick="showScreen('screen-presenca-prof')">Presença</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROFESSOR - TURMAS -->
+    <section class="screen" id="screen-turmas-prof">
+      <header class="top-bar">
+        <button class="icon-btn" onclick="showScreen('screen-professor')">
+          <i class="fa-solid fa-arrow-left"></i>
+        </button>
+        <div class="search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" placeholder="Buscar..." />
+        </div>
+      </header>
+
+      <div class="content">
+        <h1 class="page-title">Minhas turmas</h1>
+        <p class="subtitle">Acesse suas turmas da Grow.</p>
+
+        <div class="course-card">
+          <div class="course-image academic">Academic<br>English</div>
+          <div class="course-body">
+            <h3>Academic English</h3>
+            <p>Turma de inglês acadêmico para escrita de artigos científicos.</p>
+            <b>Código: ENG-AV-26</b>
+            <span><i class="fa-solid fa-users"></i> 25 alunos</span>
+            <span><i class="fa-regular fa-calendar"></i> Sábados, 10h-11h30</span>
+            <div class="mini-progress">
+              <div><span style="width:45%"></span></div>
+              <p>Presença média <b>45%</b></p>
+            </div>
+            <div class="course-actions">
+              <button onclick="showScreen('screen-class-prof')">Acessar Turma →</button>
+              <button onclick="showScreen('screen-presenca-prof')">Presença</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="course-card">
+          <div class="course-image dialetos">DIALETOS</div>
+          <div class="course-body">
+            <h3>Inglês Avançado</h3>
+            <p>Turma de intensivo inglês avançado.</p>
+            <b>Código: ENG-AV-26</b>
+            <span><i class="fa-solid fa-users"></i> 25 alunos</span>
+            <span><i class="fa-regular fa-calendar"></i> Sábados, 10h-11h30</span>
+            <div class="mini-progress">
+              <div><span style="width:45%"></span></div>
+              <p>Presença média <b>45%</b></p>
+            </div>
+            <div class="course-actions">
+              <button onclick="showScreen('screen-class-prof')">Acessar Turma →</button>
+              <button onclick="showScreen('screen-presenca-prof')">Presença</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROFESSOR - TURMA -->
+    <section class="screen" id="screen-class-prof">
+      <header class="top-bar">
+        <button class="icon-btn" onclick="showScreen('screen-professor')">
+          <i class="fa-solid fa-arrow-left"></i>
+        </button>
+        <div class="search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" placeholder="Buscar..." />
+        </div>
+      </header>
+
+      <div class="class-banner">
+        <button onclick="showScreen('screen-professor')">← Voltar</button>
+        <h1>Academic English</h1>
+        <p>Turma de inglês acadêmico para escrita de artigos.</p>
+      </div>
+
+      <div class="class-info">
+        <p><i class="fa-regular fa-book-open"></i> Código: LAP-A1-26</p>
+        <p><i class="fa-solid fa-users"></i> 18 alunos</p>
+        <p><i class="fa-regular fa-calendar"></i> Terças e Quintas, 19h-20h30</p>
+        <p><b>Professor:</b> João Santos</p>
+      </div>
+
+      <nav class="tabs">
+        <button class="tab active" data-tab="mural-prof">Mural</button>
+        <button class="tab" data-tab="atividades-prof">Atividades</button>
+        <button class="tab" data-tab="avaliacoes-prof">Avaliações</button>
+      </nav>
+
+      <div class="content">
+        <div class="tab-content active" id="mural-prof">
+          <div class="post-card">
+            <div class="post-user">
+              <div class="avatar">J</div>
+              <div>
+                <h3>João Santos</h3>
+                <p>Professor • 14 de mar</p>
+              </div>
+            </div>
+            <p class="post-text">
+              Boa tarde, galera! Segue o link do documento com o gabarito das tarefas de hoje.
+              Não esqueçam de fazer a atividade de listening!
+            </p>
+            <button class="outline-btn">🔗 Gabarito - Semana 3</button>
+            <p class="comment">💬 Comentar</p>
+          </div>
+        </div>
+
+        <div class="tab-content" id="atividades-prof">
+          <h2 class="section-title">Atividades</h2>
+          <button class="blue-btn">+ Nova Atividade</button>
+
+          <h3 class="section-sub">Atividades Ativas</h3>
+          <div class="activity-card">
+            <i class="fa-regular fa-file-lines"></i>
+            <div>
+              <h3>Atividade 4 - Semana 2</h3>
+              <p>Listening Exercise - Conversation</p>
+              <p>18 de mar às 23:59</p>
+              <p>10 pts</p>
+              <p>16/18 entregas</p>
+              <button class="outline-blue">Link do Formulário</button>
+              <button class="outline-yellow">Importar Resultados CSV</button>
+            </div>
+          </div>
+
+          <h3 class="section-sub">Atividades Corrigidas</h3>
+          <div class="activity-card corrected">
+            <i class="fa-regular fa-circle-check"></i>
+            <div>
+              <h3>Atividade 5 - Semana 3</h3>
+              <span class="badge">Notas Disponíveis</span>
+              <p>Grammar Exercise - Present Perfect</p>
+              <p>12/18 entregas</p>
+              <button class="outline-btn">Exportar Notas</button>
+              <button class="outline-btn">Ver Detalhes</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-content" id="avaliacoes-prof">
+          <h2 class="section-title">Avaliações</h2>
+
+          <div class="evaluation-item">
+            <i class="fa-regular fa-file-lines"></i>
+            <div>
+              <h3>Avaliação 1 - Conversation</h3>
+              <p>18 de mar às 23:59</p>
+            </div>
+          </div>
+
+          <div class="evaluation-item">
+            <i class="fa-regular fa-file-lines"></i>
+            <div>
+              <h3>Avaliação 2 - Adverbs</h3>
+              <p>02 de abr às 23:59</p>
+            </div>
+          </div>
+
+          <button class="blue-btn">+ Nova avaliação</button>
+
+          <div class="form-box">
+            <h3>Avaliação 4</h3>
+            <label>Nome</label>
+            <input>
+            <label>Data</label>
+            <input>
+            <label>Gmail</label>
+            <input>
+            <label>Questão 1</label>
+            <input>
+            <label>Questão 2</label>
+            <input>
+            <button class="blue-btn">Adicionar</button>
+            <button class="cancel-btn">Cancelar</button>
+          </div>
+
+          <button class="blue-btn">Notas</button>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Alunos</th>
+                <th>Entrega</th>
+                <th>Notas</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Alisson</td><td class="ok">Certo</td><td>7,7 / 100</td></tr>
+              <tr><td>Caio</td><td class="ok">Certo</td><td>100 / 100</td></tr>
+              <tr><td>Fernanda</td><td class="late">Atraso</td><td>90 / 100</td></tr>
+              <tr><td>Pietro</td><td class="ok">Certo</td><td>5,1 / 100</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROFESSOR - PRESENÇA -->
+    <section class="screen" id="screen-presenca-prof">
+      <header class="top-bar">
+        <button class="icon-btn" onclick="showScreen('screen-professor')">
+          <i class="fa-solid fa-arrow-left"></i>
+        </button>
+        <div class="search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" placeholder="Buscar..." />
+        </div>
+      </header>
+
+      <div class="content">
+        <h2 class="section-title">Presença / Academic English</h2>
+
+        <div class="course-card">
+          <div class="course-image academic">Academic<br>English</div>
+          <div class="course-body">
+            <h3>Academic English</h3>
+            <p>Turma de inglês acadêmico para escrita de artigos.</p>
+            <span><i class="fa-regular fa-book-open"></i> LAP-A1-26</span>
+            <span><i class="fa-solid fa-users"></i> 18 alunos</span>
+            <span><i class="fa-regular fa-calendar"></i> Terças e Quintas, 19h-20h30</span>
+          </div>
+        </div>
+
+        <div class="presence-grid">
+          <div class="presence-box">
+            <i class="fa-solid fa-users"></i>
+            <h3>18</h3>
+            <p>Total de Alunos</p>
+          </div>
+
+          <div class="presence-box">
+            <i class="fa-regular fa-circle-check"></i>
+            <h3>87%</h3>
+            <p>Presença Média</p>
+          </div>
+
+          <div class="presence-box">
+            <i class="fa-regular fa-calendar"></i>
+            <h3>4</h3>
+            <p>Sessões Criadas</p>
+          </div>
+        </div>
+
+        <div class="form-box">
+          <h2>Gerenciar Sessões de Presença</h2>
+          <p>Crie sessões e adicione palavras-chave para que os alunos registrem presença</p>
+          <button class="blue-btn">+ Adicionar Sessão</button>
+
+          <label>Data da Aula</label>
+          <input>
+
+          <label>Horário de Início</label>
+          <input>
+
+          <label>Horário de Término</label>
+          <input>
+
+          <label>Prazo para Registrar Presença</label>
+          <input>
+
+          <label>Descrição</label>
+          <textarea placeholder="Ex: Present Perfect - Aula teórica"></textarea>
+
+          <button class="blue-btn">Adicionar</button>
+          <button class="cancel-btn">Cancelar</button>
+        </div>
+
+        <div class="session-box">
+          <h2>Próximas Sessões</h2>
+          <div class="session-item">
+            <h3>17 de março de 2026</h3>
+            <p>Present Perfect - Aula teórica</p>
+            <span>perfect</span>
+          </div>
+
+          <div class="session-item">
+            <h3>19 de março de 2026</h3>
+            <p>Present Perfect - Prática</p>
+            <span>first</span>
+          </div>
+
+          <div class="session-item">
+            <h3>22 de março de 2026</h3>
+            <p>Conversação - Free Talk</p>
+            <span>people</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ALUNO - CURSOS -->
+    <section class="screen" id="screen-aluno">
+      <header class="top-bar">
+        <button class="icon-btn menu-open" data-role="aluno">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" placeholder="Buscar..." />
+        </div>
+      </header>
+
+      <div class="content">
+        <h1 class="page-title">Meus Cursos</h1>
+        <p class="subtitle">Acesse suas turmas da Grow.</p>
+
+        <div class="course-card">
+          <div class="course-image academic">Academic<br>English</div>
+          <div class="course-body">
+            <h3>Academic English</h3>
+            <p>Turma de inglês acadêmico para escrita de artigos.</p>
+            <b>Código: LAP-A1-26</b>
+            <span><i class="fa-solid fa-users"></i> 18 alunos</span>
+            <span><i class="fa-regular fa-calendar"></i> Terças e Quintas, 19h-20h30</span>
+
+            <div class="mini-progress">
+              <div><span style="width:65%"></span></div>
+              <p>Progresso <b>65%</b> | Presença <b>75%</b></p>
+            </div>
+
+            <button class="outline-btn" onclick="showScreen('screen-class-aluno')">Acessar Turma →</button>
+            <button class="outline-btn">Certificados →</button>
+          </div>
+        </div>
+
+        <div class="course-card">
+          <div class="course-image dialetos">DIALETOS</div>
+          <div class="course-body">
+            <h3>Inglês Avançado</h3>
+            <p>Turma de intensivo inglês avançado.</p>
+            <b>Código: ENG-AV-26</b>
+            <span><i class="fa-solid fa-users"></i> 25 alunos</span>
+            <span><i class="fa-regular fa-calendar"></i> Sábados, 10h-11h30</span>
+
+            <div class="mini-progress">
+              <div><span style="width:35%"></span></div>
+              <p>Progresso <b>35%</b> | Presença <b>45%</b></p>
+            </div>
+
+            <button class="outline-btn" onclick="showScreen('screen-class-aluno')">Acessar Turma →</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ALUNO - TURMA -->
+    <section class="screen" id="screen-class-aluno">
+      <header class="top-bar">
+        <button class="icon-btn" onclick="showScreen('screen-aluno')">
+          <i class="fa-solid fa-arrow-left"></i>
+        </button>
+        <div class="search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" placeholder="Buscar..." />
+        </div>
+      </header>
+
+      <div class="class-banner">
+        <button onclick="showScreen('screen-aluno')">← Voltar</button>
+        <h1>Academic English</h1>
+        <p>Turma de inglês acadêmico para escrita de artigos.</p>
+      </div>
+
+      <div class="class-info">
+        <p><i class="fa-regular fa-book-open"></i> Código: LAP-A1-26</p>
+        <p><i class="fa-solid fa-users"></i> 18 alunos</p>
+        <p><i class="fa-regular fa-calendar"></i> Terças e Quintas, 19h-20h30</p>
+      </div>
+
+      <nav class="tabs">
+        <button class="tab active" data-tab="atividades-aluno">Atividades</button>
+        <button class="tab" data-tab="presenca-aluno">Presença</button>
+        <button class="tab" data-tab="painel-aluno">Painel</button>
+      </nav>
+
+      <div class="content">
+        <div class="tab-content active" id="atividades-aluno">
+          <h2 class="section-title">Atividades</h2>
+
+          <h3 class="section-sub">Pendentes</h3>
+
+          <div class="activity-card">
+            <i class="fa-regular fa-file-lines"></i>
+            <div>
+              <h3>Atividade 5: Semana 3</h3>
+              <p>10 pontos</p>
+              <p>Entrega: 20 de mar às 23:59</p>
+              <button class="outline-btn">Ver Atividade</button>
+            </div>
+          </div>
+
+          <div class="activity-card">
+            <i class="fa-regular fa-file-lines"></i>
+            <div>
+              <h3>Atividade 4: Semana 3</h3>
+              <p>10 pontos</p>
+              <p>Entrega: 20 de mar às 23:59</p>
+              <button class="outline-btn">Ver Atividade</button>
+            </div>
+          </div>
+
+          <h3 class="section-sub">Entregues</h3>
+
+          <div class="activity-card corrected">
+            <i class="fa-regular fa-file-lines"></i>
+            <div>
+              <h3>Atividade 4: Semana 3</h3>
+              <span class="badge">Nota: 9/10</span>
+              <p>Complete os exercícios sobre Present Perfect.</p>
+              <button class="outline-btn">Ver Atividade</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-content" id="presenca-aluno">
+          <div class="presence-grid">
+            <div class="presence-box">
+              <i class="fa-regular fa-circle-check"></i>
+              <h3>87%</h3>
+              <p>Presença</p>
+            </div>
+
+            <div class="presence-box">
+              <i class="fa-regular fa-calendar"></i>
+              <h3>21/24</h3>
+              <p>Aulas</p>
+            </div>
+          </div>
+
+          <div class="form-box">
+            <h2>Registrar Presença</h2>
+            <p>Insira a data da aula e a palavra-chave fornecida pelo professor</p>
+
+            <label>Data da Aula</label>
+            <input>
+
+            <label>Palavra-chave</label>
+            <input placeholder="DIGITE A PALAVRA-CHAVE">
+
+            <button class="blue-btn">Confirmar Presença</button>
+
+            <div class="tip">
+              Dica: A palavra-chave é fornecida pelo professor durante a aula. Você tem até 07 dias após o término da aula para registrar sua presença.
+            </div>
+          </div>
+
+          <div class="session-box">
+            <h2>Histórico de Presença</h2>
+            <div class="session-item">
+              <h3>15 de março 2026</h3>
+              <p>Aula 04: Past Continuos</p>
+              <span>simple</span>
+            </div>
+
+            <div class="session-item danger">
+              <h3>10 de março 2026</h3>
+              <p>Aula 03: Phrasal Verbs</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-content" id="painel-aluno">
+          <div class="panel-card">
+            <h2>Ranking</h2>
+            <p>Nível: AVANÇADO</p>
+
+            <table>
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Nome</th>
+                  <th>PTS</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>1</td><td>Bruno Medeiros</td><td>29</td></tr>
+                <tr><td>2</td><td>Camila Antunes</td><td>26</td></tr>
+                <tr><td>3</td><td>Diego Ramos</td><td>24</td></tr>
+                <tr><td>4</td><td>Gabriela Fonseca</td><td>21</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="chart-card">
+            <h2>Percentual de Frequência</h2>
+            <div class="fake-chart">90%</div>
+            <p>Presenças: 90% | Faltas: 10%</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VOLUNTÁRIO -->
+    <section class="screen volunteer" id="screen-voluntario">
+      <header class="topbar volunteer-search">
+        <button class="icon-btn menu-open" data-role="voluntario">
+             <i class="fa-solid fa-bars"></i>
+        </button>
+            <div class="search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input placeholder="Buscar...">
+            </div>
+        </header>
+
+      <div class="content">
+        <p class="label">PAINEL INSTITUCIONAL</p>
+        <h1 class="vol-title">Bem-vindo(a) de volta, Voluntário(a).</h1>
+        <p class="vol-text">
+          Sua contribuição neste semestre impactou mais de 120 alunos em 3 projetos ativos.
+        </p>
+
+        <button class="check-btn">⏱ Check-in rápido →</button>
+
+        <div class="week-card">
+          <h2>Progressão Semanal <strong>15</strong> / 20h</h2>
+          <div class="progress-big">
+            <span></span>
+          </div>
+
+          <div class="week-grid">
+            <div><small>Ativo Projetos</small><strong>03</strong></div>
+            <div><small>Total de horas</small><strong>3.2h</strong></div>
+            <div><small>Status</small><strong>Em processo</strong></div>
+            <div><small>Próxima sessão</small><strong>Amanhã, 09:00</strong></div>
+          </div>
+        </div>
+
+        <div class="alert">
+          <h3>Alerta Institucional</h3>
+          <p>Um novo certificado para o ciclo “Pesquisa de Impacto 2023” foi emitido.</p>
+          <button>Ver documentos</button>
+        </div>
+
+        <div class="deadline">
+          <strong>PRÓXIMO PRAZO</strong>
+          <p>Submeter os relatórios do projeto para 2026.1 Fase 1</p>
+          <span>Com previsão de entrega em 4 dias.</span>
+        </div>
+
+        <h2 class="section-title">Projeto Ativo Portfólio</h2>
+
+        <div class="project-card">
+          <h3>Inglês para negócios</h3>
+          <p>Turma 2026.1 • Grupo A</p>
+          <div class="mini-progress">
+            <div><span style="width:65%"></span></div>
+            <p>Progresso curricular 65%</p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <h3>Alcance Comunitário</h3>
+          <p>Foco Regional • Norte</p>
+          <div class="mini-progress">
+            <div><span style="width:40%"></span></div>
+            <p>Alvo de impacto 40%</p>
+          </div>
+        </div>
+
+        <div class="tasks">
+          <h2>Tarefas Semanais</h2>
+
+          <div class="task">
+            <span></span>
+            <div>
+              <h3>Carregar materiais</h3>
+              <p>ENTREGA HOJE • CONVERSAÇÃO AVANÇADA</p>
+            </div>
+          </div>
+
+          <div class="task done">
+            <span>✓</span>
+            <div>
+              <h3>Register class attendance</h3>
+              <p>CONCLUÍDO • LAPA INGLÊS</p>
+            </div>
+          </div>
+
+          <div class="task">
+            <span></span>
+            <div>
+              <h3>Envie feedback mensal</h3>
+              <p>FALTAM 2 DIAS • GERAL</p>
+            </div>
+          </div>
+
+          <button class="blue-btn">Ver todas as tarefas</button>
+        </div>
+      </div>
+
+      <nav class="bottom-nav">
+        <button class="active"><i class="fa-solid fa-house"></i><span>Início</span></button>
+        <button><i class="fa-regular fa-clipboard"></i><span>Projetos</span></button>
+        <button><i class="fa-regular fa-clock"></i><span>Tempo</span></button>
+        <button><i class="fa-regular fa-file-lines"></i><span>Docs</span></button>
+      </nav>
+    </section>
+
+      <!-- MENU LATERAL USÁVEL -->
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <aside class="side-menu" id="sideMenu">
+      <div class="side-head">
+        <div class="grow-logo small">
+          <span>G</span><span>R</span><span>O</span><span>W</span>
+        </div>
+
+        <div>
+          <h2 id="menuTitle">Menu</h2>
+          <p id="menuSubtitle">Acesse as opções</p>
+        </div>
+
+        <button class="close-menu" id="closeMenu">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="menu-options" id="menuOptions"></div>
+
+      <button class="logout-btn" id="logoutBtn">
+        <i class="fa-solid fa-right-from-bracket"></i> SAIR
+      </button>
+    </aside>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
